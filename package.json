@@ -1,0 +1,32 @@
+{
+  "name": "inspired-lint",
+  "version": "0.0.0",
+  "private": true,
+  "bin": {
+    "inspired-lint": "src/cli.ts"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.test.json --noEmit",
+    "test": "node --test test/*.test.ts",
+    "lint": "oxlint --config ../../oxlint.config.ts src"
+  },
+  "dependencies": {
+    "@tanstack/ai": "0.69.0",
+    "@tanstack/ai-cloudflare": "0.3.0",
+    "@tanstack/ai-ollaya": "0.2.5",
+    "@tanstack/ai-openai": "0.30.0",
+    "@tanstack/ai-openrouter": "0.22.0",
+    "@tanstack/ai-typesafe": "0.1.12",
+    "oxlint": "1.87.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.2",
+    "typescript": "7.0.2"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
